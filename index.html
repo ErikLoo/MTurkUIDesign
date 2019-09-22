@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MTurk Test</title>
+
+
+
+</head>
+
+<body>
+    <video id="vid" width="50%" height="315" controls>
+
+        <source src="coffee making soundless.mp4">
+
+    </video>
+
+    <section>
+        Acitivty Name
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Starting Time
+        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp End Time
+    </section>
+
+
+    <div id="div1">
+        <input name="activityTag" id="activity" type="text" value=''>
+        <input id="startTime" label="Activity" name="startTimeTag" type="text" value="Click on this box to set time">
+        <input id="endTime" name="endTimeTag" type="text" value="Click on this box to set time">
+        <input onclick="addElements()" id="confirm" name="confirmTag" type="submit" value="confirm">
+    </div>
+
+    <!-- <button onclick="addElements()">
+            Add an activty
+        </button> -->
+
+    <script src="main.js"></script>
+    <script>
+        var count = 0;
+        function removeElement(elementName) {
+            // Removes an element from the document
+            var element = document.getElementsByName(elementName)
+            element[0].parentNode.removeChild(element[0]);
+        }
+
+        function addElements() {
+            //add some guard in here - alert user
+
+            if (isValid() == true) //make sure the entry is valid before adding more entries
+            {
+                //copy everything from the last column
+                var elmnt = document.getElementsByTagName("DIV")[count];
+                var cln = elmnt.cloneNode(true);
+                document.body.appendChild(cln);
+                clear();
+                setup();
+                removeElement("confirmTag"); //remove the previous confirmation tag
+                count++;
+            }
+            //pass id from original to copy
+
+        }
+    </script>
+</body>
+
+</html>
