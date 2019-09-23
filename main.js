@@ -4,6 +4,11 @@ var startTime;
 var endTime;
 var myVid;
 var activity; 
+var slider; 
+var output; 
+
+var beginTime; 
+var endTime; 
 
 
 function setAttribute(inputBox,myVid){
@@ -13,8 +18,10 @@ function setAttribute(inputBox,myVid){
 function init(){
     startTime = document.getElementsByName("startTimeTag") //return an array of elements
     endTime = document.getElementsByName("endTimeTag"); //reutrn an array of elements
-    myVid = document.getElementById("vid"); //return a specific elements
+    myVid = document.getElementById("vid2"); //return a specific elements
     activity = document.getElementsByName("activityTag");
+    slider = document.getElementById("myRange");
+    output = document.getElementById("demo");
 
 }
 
@@ -63,6 +70,16 @@ function setup(){
 
 // alert("startTime.length: " + startTime.length);
 init(); 
+
+// slider.oninput = function() {
+//     output.innerHTML = this.value;
+
+//     var vidDuration = myVid.duration; 
+//     var setStartTime = this.value/100*vidDuration;
+//     myVid.currentTime = setStartTime; 
+
+//     beginTime = setStartTime; 
+//   }
 
 if(startTime.length>1)
 {

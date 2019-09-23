@@ -7,38 +7,124 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MTurk Test</title>
 
+    <link rel="stylesheet" href="slider_styles.css">
 
+    <style type="text/css">
+        section {
+            display: flex;
+            flex-direction: row;
+        }
+
+        #left {
+            width: 400px;
+            margin: 20px;
+            background: yellow
+        }
+
+        #right {
+            width: 400px;
+            margin: 20px;
+            background: green
+        }
+
+        #title {
+            margin: 20px;
+        }
+
+        #crowd_entry {
+            margin: 20px;
+        }
+    </style>
 
 </head>
 
 <body>
-    <video id="vid" width="50%" height="315" controls>
+    <section id="vidoes">
 
-        <source src="coffee making soundless.mp4">
+        <div id="left">
+            <video id="vid" width="400px" controls>
 
-    </video>
+                <source src="coffee making soundless.mp4">
 
-    <section>
+            </video>
+
+        </div>
+
+        <div id="right">
+            <video id="vid2" width="400px" controls>
+
+                <source src="Looking for a  lost object.mp4">
+
+            </video>
+
+        </div>
+
+    </section>
+
+    <div id="title">
         Acitivty Name
         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Starting Time
         &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp End Time
-    </section>
+    </div>
+
+          <div class="aria-widget-slider" id="two-way slider">
+            <div class="rail-label min">
+              0
+            </div>
+
+            <div class="rail" style="width: 300px;">
+              <img id="minPriceHotel"
+                   src="images/r-arrow.png"
+                   height="20px"
+                   role="slider"
+                   tabindex="0"
+                   class="min thumb"
+                   aria-valuemin="0"
+                   aria-valuenow="100"
+                   aria-valuetext="$100"
+                   aria-valuemax="400"
+                   aria-label="Hotel Minimum Price">
+              <img id="maxPriceHotel"
+                   src="images/l-arrow.png"
+                   height="20px"
+                   role="slider"
+                   tabindex="0"
+                   class="max thumb"
+                   aria-valuemin="0"
+                   aria-valuenow="250"
+                   aria-valuetext="$250"
+                   aria-valuemax="400"
+                   aria-label="Hotel Maximum Price">
+            </div>
+
+            <div class="rail-label max">
+              0
+            </div>
+          </div>
 
 
-    <div id="div1">
+    <div id="crowd_entry">
         <input name="activityTag" id="activity" type="text" value=''>
         <input id="startTime" label="Activity" name="startTimeTag" type="text" value="Click on this box to set time">
         <input id="endTime" name="endTimeTag" type="text" value="Click on this box to set time">
         <input onclick="addElements()" id="confirm" name="confirmTag" type="submit" value="confirm">
     </div>
 
+    <div>
+        What are some of the similarities you found between these two videos and please explain why?
+    </div>
+
+    <output name="myOutput" id="demo"></output>
+
     <!-- <button onclick="addElements()">
             Add an activty
         </button> -->
 
     <script src="main.js"></script>
+    <script src="slider_operations.js"></script>
+    
     <script>
-        var count = 0;
+        var count = 3;
         function removeElement(elementName) {
             // Removes an element from the document
             var element = document.getElementsByName(elementName)
