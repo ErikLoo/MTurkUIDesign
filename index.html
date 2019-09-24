@@ -7,9 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MTurk Test</title>
 
-    <link rel="stylesheet" href="slider_styles.css">
+    <link rel="stylesheet" href="CSS Files/slider_styles.css">
 
     <style type="text/css">
+
+        #title{
+            display:flex;
+            flex-direction: row;
+        }
+
         section {
             display: flex;
             flex-direction: row;
@@ -17,34 +23,58 @@
 
         #left {
             width: 400px;
-            margin: 20px;
-            background: yellow
+            margin-left: 20px;
+            background:green;
         }
 
         #right {
             width: 400px;
-            margin: 20px;
-            background: green
+            margin-left: 20px;
+            background: rgb(21, 181, 235);
         }
 
-        #title {
-            margin: 20px;
+        #question_1{
+            margin-left:20px;
         }
 
-        #crowd_entry {
-            margin: 20px;
+        p{
+            margin:20px;
         }
+
+        /* #title {
+            margin: 20px;
+        } */
+
+        /* #crowd_entry {
+            margin: 20px;
+        } */
     </style>
 
 </head>
 
 <body>
+    <div id="title">
+            <p>Video 1</p>
+            <p>&nbsp &nbsp &nbsp &nbsp
+               &nbsp &nbsp &nbsp &nbsp 
+               &nbsp &nbsp &nbsp &nbsp 
+               &nbsp &nbsp &nbsp &nbsp
+               &nbsp &nbsp &nbsp &nbsp 
+               &nbsp &nbsp &nbsp &nbsp
+               &nbsp &nbsp &nbsp &nbsp
+               &nbsp &nbsp &nbsp &nbsp 
+               &nbsp &nbsp &nbsp &nbsp
+               &nbsp &nbsp &nbsp &nbsp
+               &nbsp
+               Video 2</p>
+    </div>
+
     <section id="vidoes">
 
         <div id="left">
             <video id="vid" width="400px" controls>
 
-                <source src="coffee making soundless.mp4">
+                <source src="videos/coffee_making_shortened.mp4">
 
             </video>
 
@@ -53,7 +83,7 @@
         <div id="right">
             <video id="vid2" width="400px" controls>
 
-                <source src="Looking for a  lost object.mp4">
+                <source src="videos/Looking for a  lost object.mp4">
 
             </video>
 
@@ -61,69 +91,54 @@
 
     </section>
 
-    <div id="title">
-        Acitivty Name
-        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Starting Time
-        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp End Time
+
+    <div class="aria-widget-slider" id="two-way slider">
+        <div class="rail-label min">
+            0
+        </div>
+
+        <div class="rail" style="width: 300px;">
+            <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0" class="min thumb"
+                aria-valuemin="0" aria-valuenow="25" aria-valuetext="25" aria-valuemax="100"
+                aria-label="Hotel Minimum Price">
+            <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0" class="max thumb"
+                aria-valuemin="0" aria-valuenow="75" aria-valuetext="75" aria-valuemax="100"
+                aria-label="Hotel Maximum Price">
+        </div>
+
+        <div class="rail-label max">
+            0
+        </div>
     </div>
 
-          <div class="aria-widget-slider" id="two-way slider">
-            <div class="rail-label min">
-              0
-            </div>
+    <p>
+            Task 1: Is Video 2 similar to Video 1? Please explain your reasoning below.
+        </p>    
+    <div id = "question_1">        
+        <textarea rows="5" cols="100" placeholder="Input your answer here"></textarea>
+    </div>
 
-            <div class="rail" style="width: 300px;">
-              <img id="minPriceHotel"
-                   src="images/r-arrow.png"
-                   height="20px"
-                   role="slider"
-                   tabindex="0"
-                   class="min thumb"
-                   aria-valuemin="0"
-                   aria-valuenow="100"
-                   aria-valuetext="$100"
-                   aria-valuemax="400"
-                   aria-label="Hotel Minimum Price">
-              <img id="maxPriceHotel"
-                   src="images/l-arrow.png"
-                   height="20px"
-                   role="slider"
-                   tabindex="0"
-                   class="max thumb"
-                   aria-valuemin="0"
-                   aria-valuenow="250"
-                   aria-valuetext="$250"
-                   aria-valuemax="400"
-                   aria-label="Hotel Maximum Price">
-            </div>
+    <p>
+        Task 2: Use the two thumbs on the slider to highlight the portion of Video 2 that reflect these similarities. 
+    </p>
 
-            <div class="rail-label max">
-              0
-            </div>
-          </div>
-
+    <!-- <div id="title">
+            Acitivty Name
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Starting Time
+            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp End Time
+        </div>
 
     <div id="crowd_entry">
-        <input name="activityTag" id="activity" type="text" value=''>
-        <input id="startTime" label="Activity" name="startTimeTag" type="text" value="Click on this box to set time">
-        <input id="endTime" name="endTimeTag" type="text" value="Click on this box to set time">
-        <input onclick="addElements()" id="confirm" name="confirmTag" type="submit" value="confirm">
-    </div>
+            <input name="activityTag" id="activity" type="text" value=''>
+            <input id="startTime" label="Activity" name="startTimeTag" type="text" value="Click on this box to set time">
+            <input id="endTime" name="endTimeTag" type="text" value="Click on this box to set time">
+            <input onclick="addElements()" id="confirm" name="confirmTag" type="submit" value="confirm">
+        </div> -->
 
-    <div>
-        What are some of the similarities you found between these two videos and please explain why?
-    </div>
+    <script src="JS Files/slider_operations.js"></script>
+    <!-- <script src="JS Files/main.js"></script> -->
 
-    <output name="myOutput" id="demo"></output>
-
-    <!-- <button onclick="addElements()">
-            Add an activty
-        </button> -->
-
-    <script src="main.js"></script>
-    <script src="slider_operations.js"></script>
-    
-    <script>
+    <!-- <script>
         var count = 3;
         function removeElement(elementName) {
             // Removes an element from the document
@@ -148,7 +163,7 @@
             //pass id from original to copy
 
         }
-    </script>
+    </script> -->
 </body>
 
 </html>

@@ -7,8 +7,40 @@
 *   Desc:   Slider widget that implements ARIA Authoring Practices
 */
 
+var myVid;
+var vidDuration; 
+var setTime; 
+
+function getVideoAttributes(){
+  myVid = document.getElementById("vid2"); //return a specific elements
+  vidDuration = myVid.duration;  
+}
+
+function setVideoTime(currentValue){
+  if(!(isNaN(currentValue)|| isNaN(vidDuration))){
+    setTime = currentValue/100*vidDuration;
+    myVid.currentTime = setTime;
+  }
+}
+
+function converToTime(inputTime){
+  var minutes = parseInt(inputTime/60);
+  var minutes_str = minutes.toString(10)
+  if(minutes_str.length==1) {minutes_str='0'+minutes_str}; 
+
+  var seconds = parseInt(inputTime%60);
+  var seconds_str = seconds.toString(10); 
+  if(seconds_str.length==1){seconds_str='0'+seconds_str};
+
+  var time = minutes_str + ":" + seconds_str;
+  
+  return time; 
+}
+
 // Create Slider that contains value, valuemin, valuemax, and valuenow
 var Slider = function (domNode)  {
+
+  getVideoAttributes(); //get video attributes along with slider initialization
 
     this.domNode = domNode;
     this.railDomNode = domNode.parentNode;
@@ -39,9 +71,10 @@ var Slider = function (domNode)  {
     });
   };
   
+
   // Initialize slider
-  Slider.prototype.init = function () {
-  
+  Slider.prototype.init = function () {    
+
     if (this.domNode.previousElementSibling) {
       this.minDomNode = this.domNode.previousElementSibling;
       this.railMin = parseInt((this.minDomNode.getAttribute('aria-valuemin')));
@@ -83,11 +116,15 @@ var Slider = function (domNode)  {
     this.moveSliderTo(this.valueNow);
   
   };
+
+
   
   Slider.prototype.moveSliderTo = function (value) {
     var valueMax = parseInt(this.domNode.getAttribute('aria-valuemax'));
     var valueMin = parseInt(this.domNode.getAttribute('aria-valuemin'));
   
+    var tag="Start: ";
+
     if (value > valueMax) {
       value = valueMax;
     }
@@ -96,13 +133,20 @@ var Slider = function (domNode)  {
       value = valueMin;
     }
   
+    //add video control in here
+    
+
     this.valueNow = value;
-    this.dolValueNow = '$' + value;
-  
+
     this.domNode.setAttribute('aria-valuenow', this.valueNow);
-    this.domNode.setAttribute('aria-valuetext', this.dolValueNow);
+
+    // this.dolValueNow = tag + converToTime(value/100*vidDuration);
+    // this.domNode.setAttribute('aria-valuetext', this.dolValueNow);
+
+    setVideoTime(value); //set video control time here
   
     if (this.minDomNode) {
+      tag = "End: "; 
       this.minDomNode.setAttribute('aria-valuemax', this.valueNow);
     }
   
@@ -110,6 +154,9 @@ var Slider = function (domNode)  {
       this.maxDomNode.setAttribute('aria-valuemin', this.valueNow);
     }
   
+    this.dolValueNow = tag + converToTime(value/100*vidDuration);
+    this.domNode.setAttribute('aria-valuetext', this.dolValueNow);
+
     var pos = Math.round(((this.valueNow - this.railMin) * (this.railWidth - 2 * (this.thumbWidth - this.railBorderWidth))) / (this.railMax - this.railMin));
   
     if (this.minDomNode) {
