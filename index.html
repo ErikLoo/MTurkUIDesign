@@ -10,21 +10,21 @@
     <link rel="stylesheet" href="CSS Files/slider_styles.css">
 
     <style type="text/css">
-
-        #title{
-            display:flex;
+        #title {
+            display: flex;
             flex-direction: row;
         }
 
         section {
             display: flex;
             flex-direction: row;
+            margin: 20px;
         }
 
         #left {
             width: 400px;
             margin-left: 20px;
-            background:green;
+            background: green;
         }
 
         #right {
@@ -33,17 +33,30 @@
             background: rgb(21, 181, 235);
         }
 
-        #question_1{
-            margin-left:20px;
+        .similarities {
+            margin-left: 20px;
+            margin-top: 10px;
         }
 
-        p{
-            margin:20px;
+        .differences {
+            margin-left: 18px;
+            margin-top: 10px;
         }
 
-        /* #title {
-            margin: 20px;
-        } */
+        #question_2 {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 40px;
+        }
+
+        .mybutton {
+            margin-top: 20px;
+            margin-left: 295px;
+        }
+
+
 
         /* #crowd_entry {
             margin: 20px;
@@ -54,19 +67,19 @@
 
 <body>
     <div id="title">
-            <p>Video 1</p>
-            <p>&nbsp &nbsp &nbsp &nbsp
-               &nbsp &nbsp &nbsp &nbsp 
-               &nbsp &nbsp &nbsp &nbsp 
-               &nbsp &nbsp &nbsp &nbsp
-               &nbsp &nbsp &nbsp &nbsp 
-               &nbsp &nbsp &nbsp &nbsp
-               &nbsp &nbsp &nbsp &nbsp
-               &nbsp &nbsp &nbsp &nbsp 
-               &nbsp &nbsp &nbsp &nbsp
-               &nbsp &nbsp &nbsp &nbsp
-               &nbsp
-               Video 2</p>
+        <p>Video 1</p>
+        <p>&nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp
+            Video 2</p>
     </div>
 
     <section id="vidoes">
@@ -83,7 +96,7 @@
         <div id="right">
             <video id="vid2" width="400px" controls>
 
-                <source src="videos/Looking for a  lost object.mp4">
+                <source src="videos/Tea making soundless.mp4">
 
             </video>
 
@@ -91,6 +104,62 @@
 
     </section>
 
+    <p class="tasks">Task 1: Play Video 1 and Video 2 and identify any similarties and differences between them</p>
+    <p>
+        SIMILARTIES
+        &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+        DIFFERENCES
+    </p>
+    <div name ="Boxes">
+        <section>
+            <div class="similarities">
+                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+            </div>
+
+            <div class="differences">
+                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div class="similarities">
+                <textarea rows="5" cols="54" placeholder="...in terms of activities"></textarea>
+            </div>
+
+            <div class="differences">
+                <textarea rows="5" cols="54" placeholder="...in terms of activities"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div class="similarities">
+                <textarea rows="5" cols="54" placeholder="...in terms of environment"></textarea>
+            </div>
+
+            <div class="differences">
+                <textarea rows="5" cols="54" placeholder="...in terms of environment"></textarea>
+            </div>
+        </section>
+
+    </div>
+
+    <div class="mybutton">
+        <button onclick="addElements()">Identified more information? Add more entries here</button>
+    </div>
+
+    <p>
+        Task 2: Use the thumbs on the slider to highlight the most representative portion of Video 2 that reflect
+        the similarities identified in task 1.
+    </p>
 
     <div class="aria-widget-slider" id="two-way slider">
         <div class="rail-label min">
@@ -111,34 +180,10 @@
         </div>
     </div>
 
-    <p>
-            Task 1: Is Video 2 similar to Video 1? Please explain your reasoning below.
-        </p>    
-    <div id = "question_1">        
-        <textarea rows="5" cols="100" placeholder="Input your answer here"></textarea>
-    </div>
-
-    <p>
-        Task 2: Use the two thumbs on the slider to highlight the portion of Video 2 that reflect these similarities. 
-    </p>
-
-    <!-- <div id="title">
-            Acitivty Name
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Starting Time
-            &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp End Time
-        </div>
-
-    <div id="crowd_entry">
-            <input name="activityTag" id="activity" type="text" value=''>
-            <input id="startTime" label="Activity" name="startTimeTag" type="text" value="Click on this box to set time">
-            <input id="endTime" name="endTimeTag" type="text" value="Click on this box to set time">
-            <input onclick="addElements()" id="confirm" name="confirmTag" type="submit" value="confirm">
-        </div> -->
-
     <script src="JS Files/slider_operations.js"></script>
     <!-- <script src="JS Files/main.js"></script> -->
 
-    <!-- <script>
+    <script>
         var count = 3;
         function removeElement(elementName) {
             // Removes an element from the document
@@ -149,21 +194,37 @@
         function addElements() {
             //add some guard in here - alert user
 
-            if (isValid() == true) //make sure the entry is valid before adding more entries
-            {
-                //copy everything from the last column
-                var elmnt = document.getElementsByTagName("DIV")[count];
-                var cln = elmnt.cloneNode(true);
-                document.body.appendChild(cln);
-                clear();
-                setup();
-                removeElement("confirmTag"); //remove the previous confirmation tag
-                count++;
-            }
+            // if (isValid() == true) //make sure the entry is valid before adding more entries
+            // {
+            //copy everything from the last column
+            var elmnt = document.getElementsByTagName("SECTION")[count];
+            var boxes = document.getElementsByName("Boxes")[0];
+            var elmnt2 = document.body.getElementsByTagName("BUTTON")[0];
+            var cln = elmnt.cloneNode(true);
+            var mylist = document.body;
+            // mylist.appendChild(cln);
+            //initialize to some values
+            var similarBox = cln.getElementsByTagName("TEXTAREA")[0];
+            similarBox.setAttribute('placeholder', 'Add your own observations of similarities');
+            similarBox.value = ''; 
+
+            var diffBox = cln.getElementsByTagName("TEXTAREA")[1];
+            diffBox.setAttribute('placeholder', 'Add your own observations of differences');
+            diffBox.value=''; 
+            // mylist.insertBefore(cln,elmnt);
+            boxes.appendChild(cln); 
+            // elmnt2.appendChild(cln);
+            // clear();
+            // setup();
+            // removeElement("confirmTag"); //remove the previous confirmation tag
+            count++;
+
+
+            // }
             //pass id from original to copy
 
         }
-    </script> -->
+    </script>
 </body>
 
 </html>
