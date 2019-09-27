@@ -7,22 +7,19 @@
 *   Desc:   Slider widget that implements ARIA Authoring Practices
 */
 
-var myVid;
+var myVid2;
 var vidDuration; 
 var setTime; 
 
 function getVideoAttributes(vidId){
-  myVid = document.getElementById(vidId); //return a specific elements
-  vidDuration = myVid.duration;  
+  myVid2 = document.getElementById(vidId); //return a specific elements
+  vidDuration = myVid2.duration;  
 }
 
 function setVideoTime(currentValue){
   if(!(isNaN(currentValue)|| isNaN(vidDuration))){
-
-    console.log(myVid.id); 
-
     setTime = currentValue/100*vidDuration;
-    myVid.currentTime = setTime;
+    myVid2.currentTime = setTime;
   }
 }
 
@@ -41,7 +38,7 @@ function converToTime(inputTime){
 }
 
 // Create Slider that contains value, valuemin, valuemax, and valuenow
-var Slider = function (domNode)  {
+var Slider2 = function (domNode)  {
 
   // getVideoAttributes(); //get video attributes along with slider initialization
 
@@ -76,7 +73,7 @@ var Slider = function (domNode)  {
   
 
   // Initialize slider
-  Slider.prototype.init = function () {    
+  Slider2.prototype.init = function () {    
 
     if (this.domNode.previousElementSibling) {
       this.minDomNode = this.domNode.previousElementSibling;
@@ -122,7 +119,7 @@ var Slider = function (domNode)  {
 
 
   
-  Slider.prototype.moveSliderTo = function (value) {
+  Slider2.prototype.moveSliderTo = function (value) {
     var valueMax = parseInt(this.domNode.getAttribute('aria-valuemax'));
     var valueMin = parseInt(this.domNode.getAttribute('aria-valuemin'));
   
@@ -174,7 +171,7 @@ var Slider = function (domNode)  {
     }
   };
   
-  Slider.prototype.handleKeyDown = function (event) {
+  Slider2.prototype.handleKeyDown = function (event) {
   
     var flag = false;
   
@@ -222,17 +219,17 @@ var Slider = function (domNode)  {
   
   };
   
-  Slider.prototype.handleFocus = function (event) {
+  Slider2.prototype.handleFocus = function (event) {
     this.domNode.classList.add('focus');
     this.railDomNode.classList.add('focus');
   };
   
-  Slider.prototype.handleBlur = function (event) {
+  Slider2.prototype.handleBlur = function (event) {
     this.domNode.classList.remove('focus');
     this.railDomNode.classList.remove('focus');
   };
   
-  Slider.prototype.handleMouseDown = function (event) {
+  Slider2.prototype.handleMouseDown = function (event) {
   
     var self = this;
   
@@ -271,12 +268,11 @@ var Slider = function (domNode)  {
   // Initialise Sliders on the page
   window.addEventListener('load', function () {
   
-    var sliders = document.querySelectorAll('[role=slider]');;
-    for (var i = 0; i < sliders.length; i++) {
-      getVideoAttributes("vid1"); 
-      // console.log("initialized" + myVid.id); 
-      var s = new Slider(sliders[i]);
-      s.init();
+    var sliders2 = document.querySelectorAll('[role=slider2]');;
+    for (var i = 0; i < sliders2.length; i++) {
+      getVideoAttributes("vid2"); 
+      var s2 = new Slider2(sliders2[i]);
+      s2.init();
     }
   
   });

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MTurk Test</title>
+
+    <link rel="stylesheet" href="CSS Files/slider_styles.css">
+
+    <style type="text/css">
+        #title {
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            margin: 20px;
+        }
+
+        #left {
+            width: 400px;
+            margin-left: 20px;
+            background: green;
+        }
+
+        #right {
+            width: 400px;
+            margin-left: 20px;
+            background: rgb(21, 181, 235);
+        }
+
+        .similarities {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .differences {
+            margin-left: 18px;
+            margin-top: 10px;
+        }
+
+        #question_2 {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 40px;
+        }
+
+        .mybutton {
+            margin-top: 20px;
+            margin-left: 295px;
+        }
+
+
+
+        /* #crowd_entry {
+            margin: 20px;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div id="title">
+        <p>Video 1</p>
+        <p>&nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp
+            Video 2</p>
+    </div>
+
+    <section id="vidoes">
+
+        <div id="left">
+            <video id="vid1" width="400px" controls>
+
+                <source src="videos/coffee_making_shortened.mp4">
+
+            </video>
+
+        </div>
+
+        <div id="right">
+            <video id="vid2" width="400px" controls>
+
+                <source src="videos/Tea making soundless.mp4">
+
+            </video>
+
+        </div>
+
+    </section>
+
+    <p class="tasks">Task 1: Play Video 1 and Video 2 and identify any similarties and differences between them</p>
+    <p>
+        SIMILARTIES
+        &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+        DIFFERENCES
+    </p>
+    <div name ="Boxes">
+        <section>
+            <div class="similarities">
+                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+            </div>
+
+            <div class="differences">
+                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div class="aria-widget-slider" id="two-way slider">
+                <div class="rail-label min">
+                    0
+                </div>
+        
+                <div class="rail" style="width: 300px;">
+                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0" class="min thumb"
+                        aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                        aria-label="Hotel Minimum Price">
+                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0" class="max thumb"
+                        aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                        aria-label="Hotel Maximum Price">
+                </div>
+        
+                <div class="rail-label max">
+                    0
+                </div>
+            </div>
+
+            <div class="aria-widget-slider" id="two-way slider">
+                <div class="rail-label min">
+                    0
+                </div>
+        
+                <div class="rail" style="width: 300px;">
+                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider2" tabindex="0" class="min thumb"
+                        aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                        aria-label="Hotel Minimum Price">
+                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider2" tabindex="0" class="max thumb"
+                        aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                        aria-label="Hotel Maximum Price">
+                </div>
+        
+                <div class="rail-label max">
+                    0
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="mybutton">
+        <button onclick="addElements()">Identified more information? Add more entries here</button>
+    </div>
+
+    <p>
+        Task 2: Use the thumbs on the slider to highlight the most representative portion of Video 2 that reflect
+        the similarities identified in task 1.
+    </p>
+
+
+    <script src="JS Files/slider_operations.js"></script>
+    <script src="JS Files/second_slider_operations.js"></script>
+    <!-- <script src="JS Files/main.js"></script> -->
+
+    <script>
+        var count = 3;
+        function removeElement(elementName) {
+            // Removes an element from the document
+            var element = document.getElementsByName(elementName)
+            element[0].parentNode.removeChild(element[0]);
+        }
+
+        function addElements() {
+            //add some guard in here - alert user
+
+            // if (isValid() == true) //make sure the entry is valid before adding more entries
+            // {
+            //copy everything from the last column
+            var elmnt = document.getElementsByTagName("SECTION")[count];
+            var boxes = document.getElementsByName("Boxes")[0];
+            var elmnt2 = document.body.getElementsByTagName("BUTTON")[0];
+            var cln = elmnt.cloneNode(true);
+            var mylist = document.body;
+            // mylist.appendChild(cln);
+            //initialize to some values
+            var similarBox = cln.getElementsByTagName("TEXTAREA")[0];
+            similarBox.setAttribute('placeholder', 'Add your own observations of similarities');
+            similarBox.value = ''; 
+
+            var diffBox = cln.getElementsByTagName("TEXTAREA")[1];
+            diffBox.setAttribute('placeholder', 'Add your own observations of differences');
+            diffBox.value=''; 
+            // mylist.insertBefore(cln,elmnt);
+            boxes.appendChild(cln); 
+            // elmnt2.appendChild(cln);
+            // clear();
+            // setup();
+            // removeElement("confirmTag"); //remove the previous confirmation tag
+            count++;
+
+
+            // }
+            //pass id from original to copy
+
+        }
+    </script>
+</body>
+
+</html>
