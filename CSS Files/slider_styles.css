@@ -4,8 +4,8 @@ div.aria-widget-slider {
     clear: both;
     padding-top: 0.5em;
     padding-bottom: 1em;
-    margin-top:10px;
-    /* margin-left:420px;  */
+    margin-top:5px;
+    margin-left:-16px; 
     /* overflow: hidden; */
   }
   

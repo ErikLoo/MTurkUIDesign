@@ -1,0 +1,6 @@
+#triangle-left_shape { 
+    border-right: 100px solid green;
+    border-top: 70px solid transparent;
+    border-bottom: 70px solid transparent;
+    width: 0; height: 0; 
+}

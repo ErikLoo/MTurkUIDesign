@@ -18,6 +18,7 @@
         section {
             display: flex;
             flex-direction: row;
+            /* flex-shrink: 30px; */
             margin: 20px;
         }
 
@@ -53,7 +54,7 @@
 
         .mybutton {
             margin-top: 20px;
-            margin-left: 295px;
+            margin-left: 360px;
         }
 
 
@@ -106,27 +107,20 @@
 
     <p class="tasks">Task 1: Play Video 1 and Video 2 and identify any similarties and differences between them</p>
     <p>
-        SIMILARTIES
+        Identify the sequence of events occuring in Video 1
         &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-        DIFFERENCES
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp
+        Identify the sequence of events occuring in Video 2
     </p>
-    <div name ="Boxes">
+    <div name="Boxes">
         <section>
             <div class="similarities">
-                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+                <textarea rows="2" cols="54" placeholder="e.g., Event 1:the guy is standing still."></textarea>
             </div>
 
             <div class="differences">
-                <textarea rows="5" cols="54" placeholder="...in terms of Actors"></textarea>
+                <textarea rows="2" cols="54" placeholder="e.g., Event 1: the guy is standing still."></textarea>
             </div>
         </section>
 
@@ -135,16 +129,16 @@
                 <div class="rail-label min">
                     0
                 </div>
-        
+
                 <div class="rail" style="width: 300px;">
-                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0" class="min thumb"
-                        aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                    <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider" tabindex="0"
+                        class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
                         aria-label="Hotel Minimum Price">
-                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0" class="max thumb"
-                        aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                    <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider" tabindex="0"
+                        class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
                         aria-label="Hotel Maximum Price">
                 </div>
-        
+
                 <div class="rail-label max">
                     0
                 </div>
@@ -154,16 +148,16 @@
                 <div class="rail-label min">
                     0
                 </div>
-        
+
                 <div class="rail" style="width: 300px;">
-                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0" class="min thumb"
-                        aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0"
+                        class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
                         aria-label="Hotel Minimum Price">
-                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0" class="max thumb"
-                        aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0"
+                        class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
                         aria-label="Hotel Maximum Price">
                 </div>
-        
+
                 <div class="rail-label max">
                     0
                 </div>
@@ -174,7 +168,7 @@
     </div>
 
     <div class="mybutton">
-        <button onclick="addElements()">Identified more information? Add more entries here</button>
+        <button onclick="addElements()">Add the next few events here</button>
     </div>
 
     <p>
@@ -188,7 +182,7 @@
     <!-- <script src="JS Files/main.js"></script> -->
 
     <script>
-        var count = 3;
+        var count = 1;
         function removeElement(elementName) {
             // Removes an element from the document
             var element = document.getElementsByName(elementName)
@@ -201,28 +195,28 @@
             // if (isValid() == true) //make sure the entry is valid before adding more entries
             // {
             //copy everything from the last column
-            var elmnt = document.getElementsByTagName("SECTION")[count];
+            var text_elmnt = document.getElementsByTagName("SECTION")[count];
+            var slider_elmnt = document.getElementsByTagName("SECTION")[count + 1];
+
             var boxes = document.getElementsByName("Boxes")[0];
-            var elmnt2 = document.body.getElementsByTagName("BUTTON")[0];
-            var cln = elmnt.cloneNode(true);
-            var mylist = document.body;
-            // mylist.appendChild(cln);
-            //initialize to some values
-            var similarBox = cln.getElementsByTagName("TEXTAREA")[0];
-            similarBox.setAttribute('placeholder', 'Add your own observations of similarities');
-            similarBox.value = ''; 
 
-            var diffBox = cln.getElementsByTagName("TEXTAREA")[1];
-            diffBox.setAttribute('placeholder', 'Add your own observations of differences');
-            diffBox.value=''; 
-            // mylist.insertBefore(cln,elmnt);
-            boxes.appendChild(cln); 
-            // elmnt2.appendChild(cln);
-            // clear();
-            // setup();
-            // removeElement("confirmTag"); //remove the previous confirmation tag
-            count++;
+            var txt_cln = text_elmnt.cloneNode(true);
+            var slider_cln = slider_elmnt.cloneNode(true);
 
+            // clear the text area
+            var similarBox = txt_cln.getElementsByTagName("TEXTAREA")[0];
+            similarBox.setAttribute('placeholder', 'Add your own observations of events');
+            similarBox.value = '';
+
+            var diffBox = txt_cln.getElementsByTagName("TEXTAREA")[1];
+            diffBox.setAttribute('placeholder', 'Add your own observations of events');
+            diffBox.value = '';
+
+
+            boxes.appendChild(txt_cln);
+            boxes.appendChild(slider_cln);
+
+            count = count + 2;
 
             // }
             //pass id from original to copy
