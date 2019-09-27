@@ -19,7 +19,7 @@ function getVideoAttributes(vidId){
 function setVideoTime(currentValue){
   if(!(isNaN(currentValue)|| isNaN(vidDuration))){
 
-    console.log(myVid.id); 
+    // console.log(myVid.id); 
 
     setTime = currentValue/100*vidDuration;
     myVid.currentTime = setTime;
@@ -278,5 +278,5 @@ var Slider = function (domNode)  {
       var s = new Slider(sliders[i]);
       s.init();
     }
-  
+
   });
