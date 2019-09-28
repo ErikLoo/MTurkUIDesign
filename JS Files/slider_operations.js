@@ -275,13 +275,16 @@ Slider.prototype.handleMouseDown = function (event) {
 };
 
 
-// Initialise Sliders on the page
-window.addEventListener('load', function () {
-
+function connectSliders(count){
   var sliders = document.querySelectorAll('[role=slider]');;
-  for (var i = 0; i < sliders.length; i++) {
-    // console.log("initialized" + myVid.id); 
-    if (i < 2) {
+
+  var countStart = count*4;
+  var countEnd = countStart+3; 
+
+  for (var i = countStart; i <=countEnd; i++) {
+    // console.log("initialized" + myVid.id); z
+    // console.log(i-count*4);
+    if (i-count*4 < 2) {
       var s = new Slider(sliders[i], "vid1");
       s.init();
     }
@@ -291,5 +294,11 @@ window.addEventListener('load', function () {
     }
 
   }
+}
+
+// Initialise Sliders on the page
+window.addEventListener('load', function () {
+
+  connectSliders(0); 
 
 });

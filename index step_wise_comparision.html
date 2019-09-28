@@ -19,7 +19,7 @@
             display: flex;
             flex-direction: row;
             /* flex-shrink: 30px; */
-            margin: 20px;
+            margin-left: 20px;
         }
 
         #left {
@@ -171,11 +171,6 @@
         <button onclick="addElements()">Add the next few events here</button>
     </div>
 
-    <p>
-        Task 2: Use the thumbs on the slider to highlight the most representative portion of Video 2 that reflect
-        the similarities identified in task 1.
-    </p>
-
 
     <script src="JS Files/slider_operations.js"></script>
     <!-- <script src="JS Files/second_slider_operations.js"></script> -->
@@ -183,6 +178,7 @@
 
     <script>
         var count = 1;
+        var sliderCount=0; 
         function removeElement(elementName) {
             // Removes an element from the document
             var element = document.getElementsByName(elementName)
@@ -217,7 +213,9 @@
             boxes.appendChild(slider_cln);
 
             count = count + 2;
-
+            
+            sliderCount++; 
+            connectSliders(sliderCount); //assoicate sliders with videos
             // }
             //pass id from original to copy
 
