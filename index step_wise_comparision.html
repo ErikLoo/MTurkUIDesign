@@ -68,11 +68,10 @@
 
 <body>
     <div id="title">
-        <p>Video 1</p>
+        <p>Coffee Making</p>
         <p>&nbsp &nbsp &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
-            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp
@@ -80,7 +79,7 @@
             &nbsp &nbsp &nbsp &nbsp
             &nbsp &nbsp &nbsp &nbsp
             &nbsp
-            Video 2</p>
+            Unknown Video</p>
     </div>
 
     <section id="vidoes">
@@ -105,13 +104,14 @@
 
     </section>
 
-    <p class="tasks">Task 1: Play Video 1 and Video 2 and identify any similarties and differences between them</p>
+    <!-- This is task 1 -->
+
+    <p class="tasks">Task 1: Play Video 1 and Video 2 and in each of them identify a sequence of events</p>
     <p>
-        Identify the sequence of events occuring in Video 1
+        Identify an event occuring in the "Coffee Making" video
         &nbsp &nbsp &nbsp &nbsp
         &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp
-        Identify the sequence of events occuring in Video 2
+        Identify a smilar event occuring in the unknown video
     </p>
     <div name="Boxes">
         <section>
@@ -170,6 +170,74 @@
     <div class="mybutton">
         <button onclick="addElements()">Add the next few events here</button>
     </div>
+
+    <!-- This is task 2 -->
+    <p class="tasks">Task 2: Play Video 1 and Video 2 and in each of them identify a sequence of events</p>
+    <p>
+        Identify an event occuring in the "Coffee Making" video
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp
+        Identify a smilar event occuring in the unknown video
+    </p>
+    <div name="Boxes">
+        <section>
+            <div class="similarities">
+                <textarea rows="2" cols="54" placeholder="e.g., Event 1:the guy is standing still."></textarea>
+            </div>
+
+            <div class="differences">
+                <textarea rows="2" cols="54" placeholder="e.g., Event 1: the guy is standing still."></textarea>
+            </div>
+        </section>
+
+        <section>
+            <div class="aria-widget-slider" id="two-way slider">
+                <div class="rail-label min">
+                    0
+                </div>
+
+                <div class="rail" style="width: 300px;">
+                    <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider" tabindex="0"
+                        class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                        aria-label="Hotel Minimum Price">
+                    <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider" tabindex="0"
+                        class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                        aria-label="Hotel Maximum Price">
+                </div>
+
+                <div class="rail-label max">
+                    0
+                </div>
+            </div>
+
+            <div class="aria-widget-slider" id="two-way slider">
+                <div class="rail-label min">
+                    0
+                </div>
+
+                <div class="rail" style="width: 300px;">
+                    <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0"
+                        class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                        aria-label="Hotel Minimum Price">
+                    <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0"
+                        class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100" aria-valuemax="100"
+                        aria-label="Hotel Maximum Price">
+                </div>
+
+                <div class="rail-label max">
+                    0
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+
+    <div class="mybutton">
+        <button onclick="addElements()">Add the next few events here</button>
+    </div>
+
+
 
 
     <script src="JS Files/slider_operations.js"></script>
