@@ -275,6 +275,7 @@ Slider.prototype.handleMouseDown = function (event) {
 };
 
 
+// This is for task 1
 function connectSliders(count){
   var sliders = document.querySelectorAll('[role=slider]');;
 
@@ -296,6 +297,7 @@ function connectSliders(count){
   }
 }
 
+// this is for task 2
 function connectSliders2(count){
   var sliders = document.querySelectorAll('[role=slider2]');;
 
