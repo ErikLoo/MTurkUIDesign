@@ -296,9 +296,31 @@ function connectSliders(count){
   }
 }
 
+function connectSliders2(count){
+  var sliders = document.querySelectorAll('[role=slider2]');;
+
+  var countStart = count*4;
+  var countEnd = countStart+3; 
+
+  for (var i = countStart; i <=countEnd; i++) {
+    // console.log("initialized" + myVid.id); z
+    // console.log(i-count*4);
+    if (i-count*4 < 2) {
+      var s = new Slider(sliders[i], "vid1");
+      s.init();
+    }
+    else {
+      var s2 = new Slider(sliders[i], "vid2");
+      s2.init();
+    }
+
+  }
+}
+
 // Initialise Sliders on the page
 window.addEventListener('load', function () {
 
   connectSliders(0); 
+  connectSliders2(0);
 
 });
