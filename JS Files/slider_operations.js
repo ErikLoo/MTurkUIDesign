@@ -308,11 +308,11 @@ function connectSliders2(count){
     // console.log("initialized" + myVid.id); z
     // console.log(i-count*4);
     if (i-count*4 < 2) {
-      var s = new Slider(sliders[i], "vid1");
+      var s = new Slider(sliders[i], "vid2");
       s.init();
     }
     else {
-      var s2 = new Slider(sliders[i], "vid2");
+      var s2 = new Slider(sliders[i], "vid1");
       s2.init();
     }
 

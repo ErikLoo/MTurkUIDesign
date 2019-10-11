@@ -26,22 +26,26 @@
             width: 400px;
             margin-left: 20px;
             background: green;
+            border-style: solid;
+            border-color:green;
         }
 
         #right {
             width: 400px;
             margin-left: 20px;
             background: rgb(21, 181, 235);
+            border-style: solid;
+            border-color:rgb(21, 181, 235);
         }
 
         .similarities {
             margin-left: 20px;
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
         .differences {
             margin-left: 18px;
-            margin-top: 10px;
+            margin-top: 0px;
         }
 
         #question_2 {
@@ -59,7 +63,7 @@
 
         .Entry {
             width: 920px;
-            height: 220px;
+            height: 200px;
             overflow-y: scroll;
 
         }
@@ -121,17 +125,19 @@
         &nbsp
         Step 2:Identify a SIMILAR event occuring in Video 2
     </p>
+
+
     <div class="Entry">
 
         <div name="Boxes">
             <section class="T1_Box">
                 <div class="similarities">
-                    <textarea rows="2" cols="54" placeholder="e.g., the guy is standing still."></textarea>
+                    <textarea rows="2" cols="54" placeholder="e.g., Event 1: the guy is standing still."></textarea>
                 </div>
 
                 <div class="differences">
                     <textarea rows="2" cols="54"
-                        placeholder="e.g., Similarly, the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
+                        placeholder="e.g., Event 1: the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
                 </div>
             </section>
 
@@ -178,18 +184,21 @@
 
         </div>
 
-        <div class="mybutton">
-            <button onclick="addElements()">Add the next few events here</button>
-        </div>
+    </div>
+
+    <div class="mybutton">
+        <button onclick="addElements()">Add the more events here</button>
     </div>
     <!-- This is task 2 -->
     <p class="tasks"><b>Task 2: Play Video 2 FIRST and find similar events in Video 1. Segement both events out.</b></p>
     <p>
-        Step 2:Identify a SIMILAR event occuring in Video 1
+        Step 1:Identify an event occuring in Video 2
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp
         &nbsp &nbsp &nbsp &nbsp
         &nbsp &nbsp &nbsp &nbsp
         &nbsp
-        Step 1:Identify an event occuring in Video 2
+        Step 2:Identify a SIMILAR event occuring in Video 1
     </p>
 
 
@@ -199,35 +208,16 @@
             <section class="T2_Box">
                 <div class="similarities">
                     <textarea rows="2" cols="54"
-                        placeholder="e.g., Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
+                        placeholder="e.g., Event 1: Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
                 </div>
 
                 <div class="differences">
                     <textarea rows="2" cols="54"
-                        placeholder="e.g., The guy appears to be getting some water"></textarea>
+                        placeholder="e.g., Event 1: The guy appears to be getting some water"></textarea>
                 </div>
             </section>
 
             <section class="T2_Slider">
-                <div class="aria-widget-slider" id="two-way slider">
-                    <div class="rail-label min">
-                        0
-                    </div>
-
-                    <div class="rail" style="width: 300px;">
-                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider2" tabindex="0"
-                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
-                            aria-label="Hotel Minimum Price">
-                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider2" tabindex="0"
-                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
-                            aria-valuemax="100" aria-label="Hotel Maximum Price">
-                    </div>
-
-                    <div class="rail-label max">
-                        0
-                    </div>
-                </div>
-
                 <div class="aria-widget-slider" id="two-way slider">
                     <div class="rail-label min">
                         0
@@ -247,16 +237,33 @@
                     </div>
                 </div>
 
+                <div class="aria-widget-slider" id="two-way slider">
+                    <div class="rail-label min">
+                        0
+                    </div>
+
+                    <div class="rail" style="width: 300px;">
+                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider2" tabindex="0"
+                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                            aria-label="Hotel Minimum Price">
+                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider2" tabindex="0"
+                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
+                            aria-valuemax="100" aria-label="Hotel Maximum Price">
+                    </div>
+
+                    <div class="rail-label max">
+                        0
+                    </div>
+                </div>
+
             </section>
 
         </div>
 
-        <div class="mybutton">
-            <button onclick="addElements2()">Add the next few events here</button>
-        </div>
-
     </div>
-
+    <div class="mybutton">
+        <button onclick="addElements2()">Add the more events here</button>
+    </div>
 
 
     <script src="JS Files/slider_operations.js"></script>
