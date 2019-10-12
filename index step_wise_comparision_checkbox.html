@@ -91,7 +91,7 @@
             <b>Video 2: Unknown Video</b></p>
     </div>
 
-    <section id="vidoes">
+    <section id="videos">
 
         <div id="left">
             <video id="vid1" width="400px" controls>
@@ -131,10 +131,8 @@
                 &nbsp &nbsp &nbsp &nbsp
                 &nbsp &nbsp &nbsp
                 &nbsp &nbsp &nbsp
-                &nbsp &nbsp &nbsp
-                &nbsp &nbsp &nbsp
-                &nbsp
-                Step 2:Identify a SIMILAR event occuring in Video 2
+                &nbsp &nbsp
+                Step 2:Does this event occur in Video 2?
             </p>
 
             <div class="Entry">
@@ -145,14 +143,21 @@
                                 placeholder="e.g., Event 1: the guy is standing still."></textarea>
                         </div>
 
+                        <!-- add checkboxes in there -->
+
                         <div class="differences">
-                            <textarea rows="2" cols="54"
-                                placeholder="e.g., Event 1: the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
+                            <form action="/action_page.php" method="get">
+                                <input type="checkbox" class="No" name="choice"> No.<br>
+                                <input type="checkbox" class="Yes" name="choice"> Yes. Video segment indicated on the
+                                slider
+                                below<br>
+                            </form>
                         </div>
+
                     </section>
 
                     <section class="T1_Slider">
-                        <div class="aria-widget-slider" id="two-way slider">
+                        <div class="aria-widget-slider">
                             <div class="rail-label min">
                                 0
                             </div>
@@ -171,7 +176,7 @@
                             </div>
                         </div>
 
-                        <div class="aria-widget-slider" id="two-way slider">
+                        <div class="aria-widget-slider">
                             <div class="rail-label min">
                                 0
                             </div>
@@ -232,7 +237,7 @@
                     </section>
 
                     <section class="T2_Slider">
-                        <div class="aria-widget-slider" id="two-way slider">
+                        <div class="aria-widget-slider">
                             <div class="rail-label min">
                                 0
                             </div>
@@ -251,7 +256,7 @@
                             </div>
                         </div>
 
-                        <div class="aria-widget-slider" id="two-way slider">
+                        <div class="aria-widget-slider">
                             <div class="rail-label min">
                                 0
                             </div>
@@ -280,11 +285,6 @@
             </div>
 </body>
 
-</div>
-</div>
-
-
-
 
 <script src="bower/bower_components/jquery/dist/jquery.js"></script>
 <script>
@@ -312,10 +312,10 @@
                 });
             }
         });
-
     });
 </script>
 
+<script src = "JS Files/checkbox.js"></script>
 <script src="JS Files/slider_operations.js"></script>
 <!-- <script src="JS Files/second_slider_operations.js"></script> -->
 <!-- <script src="JS Files/main.js"></script> -->
@@ -349,11 +349,6 @@
         var similarBox = txt_cln.getElementsByTagName("TEXTAREA")[0];
         similarBox.setAttribute('placeholder', 'Add your own observations of events');
         similarBox.value = '';
-
-        var diffBox = txt_cln.getElementsByTagName("TEXTAREA")[1];
-        diffBox.setAttribute('placeholder', 'Add your own observations of events');
-        diffBox.value = '';
-
 
         boxes.appendChild(txt_cln);
         boxes.appendChild(slider_cln);
