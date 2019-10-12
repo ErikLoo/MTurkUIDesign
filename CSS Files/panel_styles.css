@@ -1,0 +1,49 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    width: 920px;
+}
+
+
+.tab-panels ul {
+    margin-left: 40px;
+    padding: 0;
+}
+
+.tab-panels ul li {
+    list-style-type: none;
+    display: inline-block;
+    /* this is the colour of the panel tab */
+    background: #999;
+    margin: 0;
+    padding: 3px 10px;
+    border-radius: 10px 10px 0 0;
+    /* this is the colour of the tab text */
+    color: #fff;
+    font-weight: 200;
+    cursor: pointer;
+
+}
+
+.tab-panels ul li:hover {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels ul li.active {
+    color: #fff;
+    background: #666;
+}
+
+.tab-panels .panel {
+    display: none;
+    /* this is the background colour of the panel content */
+    background: white;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.tab-panels .panel.active {
+    display: block;
+}

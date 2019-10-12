@@ -8,6 +8,7 @@
     <title>MTurk Test</title>
 
     <link rel="stylesheet" href="CSS Files/slider_styles.css">
+    <link rel="stylesheet" href="CSS Files/panel_styles.css">
 
     <style type="text/css">
         #title {
@@ -112,169 +113,207 @@
 
     </section>
 
-    <!-- This is task 1 -->
+    <div class="tab-panels">
+        <ul class="tabs">
+            <li rel="panel1" class="active">Task 1</li>
+            <li rel="panel2">Task2</li>
+        </ul>
 
-    <p class="tasks"><b>Task 1: Play Video 1 FIRST and find similar events in Video 2. Segment both events out.</b></p>
-    <p>
-        Step 1:Identify an event occuring in Video 1
-        &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp
-        &nbsp
-        Step 2:Identify a SIMILAR event occuring in Video 2
-    </p>
+        <div id="panel1" class="panel active">
+            <!-- add the content of task 1 -->
 
+            <!-- This is task 1 -->
 
-    <div class="Entry">
+            <p class="tasks"><b>Task 1: Play Video 1 FIRST and find similar events in Video 2. Segment both events
+                    out.</b></p>
+            <p>
+                Step 1:Identify an event occuring in Video 1
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp
+                &nbsp
+                Step 2:Identify a SIMILAR event occuring in Video 2
+            </p>
 
-        <div name="Boxes">
-            <section class="T1_Box">
-                <div class="similarities">
-                    <textarea rows="2" cols="54" placeholder="e.g., Event 1: the guy is standing still."></textarea>
+            <div class="Entry">
+                <div name="Boxes" width="900px">
+                    <section class="T1_Box">
+                        <div class="similarities">
+                            <textarea rows="2" cols="54"
+                                placeholder="e.g., Event 1: the guy is standing still."></textarea>
+                        </div>
+
+                        <div class="differences">
+                            <textarea rows="2" cols="54"
+                                placeholder="e.g., Event 1: the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
+                        </div>
+                    </section>
+
+                    <section class="T1_Slider">
+                        <div class="aria-widget-slider" id="two-way slider">
+                            <div class="rail-label min">
+                                0
+                            </div>
+
+                            <div class="rail" style="width: 300px;">
+                                <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider"
+                                    tabindex="0" class="min thumb" aria-valuemin="0" aria-valuenow="0"
+                                    aria-valuetext="0" aria-valuemax="100" aria-label="Hotel Minimum Price">
+                                <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider"
+                                    tabindex="0" class="max thumb" aria-valuemin="0" aria-valuenow="100"
+                                    aria-valuetext="100" aria-valuemax="100" aria-label="Hotel Maximum Price">
+                            </div>
+
+                            <div class="rail-label max">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="aria-widget-slider" id="two-way slider">
+                            <div class="rail-label min">
+                                0
+                            </div>
+
+                            <div class="rail" style="width: 300px;">
+                                <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider"
+                                    tabindex="0" class="min thumb" aria-valuemin="0" aria-valuenow="0"
+                                    aria-valuetext="0" aria-valuemax="100" aria-label="Hotel Minimum Price">
+                                <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider"
+                                    tabindex="0" class="max thumb" aria-valuemin="0" aria-valuenow="100"
+                                    aria-valuetext="100" aria-valuemax="100" aria-label="Hotel Maximum Price">
+                            </div>
+
+                            <div class="rail-label max">
+                                0
+                            </div>
+                        </div>
+
+                    </section>
+
                 </div>
 
-                <div class="differences">
-                    <textarea rows="2" cols="54"
-                        placeholder="e.g., Event 1: the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
+                <div class="mybutton">
+                    <button onclick="addElements()">Add the more events here</button>
                 </div>
-            </section>
-
-            <section class="T1_Slider">
-                <div class="aria-widget-slider" id="two-way slider">
-                    <div class="rail-label min">
-                        0
-                    </div>
-
-                    <div class="rail" style="width: 300px;">
-                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider" tabindex="0"
-                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
-                            aria-label="Hotel Minimum Price">
-                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider" tabindex="0"
-                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
-                            aria-valuemax="100" aria-label="Hotel Maximum Price">
-                    </div>
-
-                    <div class="rail-label max">
-                        0
-                    </div>
-                </div>
-
-                <div class="aria-widget-slider" id="two-way slider">
-                    <div class="rail-label min">
-                        0
-                    </div>
-
-                    <div class="rail" style="width: 300px;">
-                        <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0"
-                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
-                            aria-label="Hotel Minimum Price">
-                        <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0"
-                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
-                            aria-valuemax="100" aria-label="Hotel Maximum Price">
-                    </div>
-
-                    <div class="rail-label max">
-                        0
-                    </div>
-                </div>
-
-            </section>
-
+            </div>
         </div>
-
-    </div>
-
-    <div class="mybutton">
-        <button onclick="addElements()">Add the more events here</button>
-    </div>
-    <!-- This is task 2 -->
-    <p class="tasks"><b>Task 2: Play Video 2 FIRST and find similar events in Video 1. Segement both events out.</b></p>
-    <p>
-        Step 1:Identify an event occuring in Video 2
-        &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp
-        &nbsp &nbsp &nbsp &nbsp
-        &nbsp
-        Step 2:Identify a SIMILAR event occuring in Video 1
-    </p>
+        <div id="panel2" class="panel">
+            <!-- add the content of task2 -->
+            <!-- This is task 2 -->
+            <p class="tasks"><b>Task 2: Play Video 2 FIRST and find similar events in Video 1. Segement both events
+                    out.</b></p>
+            <p>
+                Step 1:Identify an event occuring in Video 2
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp &nbsp
+                &nbsp
+                Step 2:Identify a SIMILAR event occuring in Video 1
+            </p>
 
 
-    <div class="Entry">
+            <div class="Entry">
 
-        <div name="Boxes2" class="Task2">
-            <section class="T2_Box">
-                <div class="similarities">
-                    <textarea rows="2" cols="54"
-                        placeholder="e.g., Event 1: Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
+                <div name="Boxes2" class="Task2">
+                    <section class="T2_Box">
+                        <div class="similarities">
+                            <textarea rows="2" cols="54"
+                                placeholder="e.g., Event 1: Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
+                        </div>
+
+                        <div class="differences">
+                            <textarea rows="2" cols="54"
+                                placeholder="e.g., Event 1: The guy appears to be getting some water"></textarea>
+                        </div>
+                    </section>
+
+                    <section class="T2_Slider">
+                        <div class="aria-widget-slider" id="two-way slider">
+                            <div class="rail-label min">
+                                0
+                            </div>
+
+                            <div class="rail" style="width: 300px;">
+                                <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider2"
+                                    tabindex="0" class="min thumb" aria-valuemin="0" aria-valuenow="0"
+                                    aria-valuetext="0" aria-valuemax="100" aria-label="Hotel Minimum Price">
+                                <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider2"
+                                    tabindex="0" class="max thumb" aria-valuemin="0" aria-valuenow="100"
+                                    aria-valuetext="100" aria-valuemax="100" aria-label="Hotel Maximum Price">
+                            </div>
+
+                            <div class="rail-label max">
+                                0
+                            </div>
+                        </div>
+
+                        <div class="aria-widget-slider" id="two-way slider">
+                            <div class="rail-label min">
+                                0
+                            </div>
+
+                            <div class="rail" style="width: 300px;">
+                                <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider2"
+                                    tabindex="0" class="min thumb" aria-valuemin="0" aria-valuenow="0"
+                                    aria-valuetext="0" aria-valuemax="100" aria-label="Hotel Minimum Price">
+                                <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider2"
+                                    tabindex="0" class="max thumb" aria-valuemin="0" aria-valuenow="100"
+                                    aria-valuetext="100" aria-valuemax="100" aria-label="Hotel Maximum Price">
+                            </div>
+
+                            <div class="rail-label max">
+                                0
+                            </div>
+                        </div>
+
+                    </section>
+
                 </div>
 
-                <div class="differences">
-                    <textarea rows="2" cols="54"
-                        placeholder="e.g., Event 1: The guy appears to be getting some water"></textarea>
-                </div>
-            </section>
-
-            <section class="T2_Slider">
-                <div class="aria-widget-slider" id="two-way slider">
-                    <div class="rail-label min">
-                        0
-                    </div>
-
-                    <div class="rail" style="width: 300px;">
-                        <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider2" tabindex="0"
-                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
-                            aria-label="Hotel Minimum Price">
-                        <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider2" tabindex="0"
-                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
-                            aria-valuemax="100" aria-label="Hotel Maximum Price">
-                    </div>
-
-                    <div class="rail-label max">
-                        0
-                    </div>
-                </div>
-
-                <div class="aria-widget-slider" id="two-way slider">
-                    <div class="rail-label min">
-                        0
-                    </div>
-
-                    <div class="rail" style="width: 300px;">
-                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider2" tabindex="0"
-                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
-                            aria-label="Hotel Minimum Price">
-                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider2" tabindex="0"
-                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
-                            aria-valuemax="100" aria-label="Hotel Maximum Price">
-                    </div>
-
-                    <div class="rail-label max">
-                        0
-                    </div>
-                </div>
-
-            </section>
-
-        </div>
-
-    </div>
-    <div class="mybutton">
-        <button onclick="addElements2()">Add the more events here</button>
-    </div>
+            </div>
+            <div class="mybutton">
+                <button onclick="addElements2()">Add the more events here</button>
+            </div>
 </body>
 
-<script src="bower/bower_components/jquery/dist/jquery.js"></script>
+</div>
+</div>
 
+
+
+
+<script src="bower/bower_components/jquery/dist/jquery.js"></script>
 <script>
-    //wait for my whole document to be ready
-    $(document).ready(function () {
-        //add your function here
+    $(function () {
+
+        $('.tab-panels .tabs li').on('click', function () {
+
+            var $panel = $(this).closest('.tab-panels');
+
+            $panel.find('.tabs li.active').removeClass('active');
+            $(this).addClass('active');
+
+            //figure out which panel to show
+            var panelToShow = $(this).attr('rel');
+
+            //hide current panel
+            $panel.find('.panel.active').slideUp(300, showNextPanel);
+
+            //show next panel
+            function showNextPanel() {
+                $(this).removeClass('active');
+
+                $('#' + panelToShow).slideDown(300, function () {
+                    $(this).addClass('active');
+                });
+            }
+        });
+
     });
 </script>
-
 
 <script src="JS Files/slider_operations.js"></script>
 <!-- <script src="JS Files/second_slider_operations.js"></script> -->
