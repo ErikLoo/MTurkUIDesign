@@ -5,16 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="bower/bower_components/jquery/dist/jquery.js"></script>
 </head>
 <body>
     <div id="myElement">
             Some Title
     </div>
 </body>
+<script src="bower/bower_components/jquery/dist/jquery.js"></script>
 <script>
-    $document.ready(function(){
-
-    })
+    //wait for my whole document to be ready
+    $(document).ready(function(){
+        $("#myElement").hide(300).show(1000)
+    });
 </script>
 </html>

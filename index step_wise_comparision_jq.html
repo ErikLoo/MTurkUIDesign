@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MTurk Test</title>
+
+    <link rel="stylesheet" href="CSS Files/slider_styles.css">
+
+    <style type="text/css">
+        #title {
+            display: flex;
+            flex-direction: row;
+        }
+
+        section {
+            display: flex;
+            flex-direction: row;
+            /* flex-shrink: 30px; */
+            margin-left: 20px;
+        }
+
+        #left {
+            width: 400px;
+            margin-left: 20px;
+            background: green;
+            border-style: solid;
+            border-color: green;
+        }
+
+        #right {
+            width: 400px;
+            margin-left: 20px;
+            background: rgb(21, 181, 235);
+            border-style: solid;
+            border-color: rgb(21, 181, 235);
+        }
+
+        .similarities {
+            margin-left: 20px;
+            margin-top: 0px;
+        }
+
+        .differences {
+            margin-left: 18px;
+            margin-top: 0px;
+        }
+
+        #question_2 {
+            margin-left: 20px;
+        }
+
+        p {
+            margin-left: 40px;
+        }
+
+        .mybutton {
+            margin-top: 00px;
+            margin-left: 360px;
+        }
+
+        .Entry {
+            width: 920px;
+            height: 200px;
+            overflow-y: scroll;
+
+        }
+
+
+        /* #crowd_entry {
+            margin: 20px;
+        } */
+    </style>
+
+</head>
+
+<body>
+    <div id="title">
+        <p><b>Video 1: Coffee Making</b></p>
+        <p>&nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp &nbsp &nbsp
+            &nbsp &nbsp
+            <b>Video 2: Unknown Video</b></p>
+    </div>
+
+    <section id="vidoes">
+
+        <div id="left">
+            <video id="vid1" width="400px" controls>
+
+                <source src="videos/coffee_making_shortened.mp4">
+
+            </video>
+
+        </div>
+
+        <div id="right">
+            <video id="vid2" width="400px" controls>
+
+                <source src="videos/Tea making soundless.mp4">
+
+            </video>
+
+        </div>
+
+    </section>
+
+    <!-- This is task 1 -->
+
+    <p class="tasks"><b>Task 1: Play Video 1 FIRST and find similar events in Video 2. Segment both events out.</b></p>
+    <p>
+        Step 1:Identify an event occuring in Video 1
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp
+        &nbsp
+        Step 2:Identify a SIMILAR event occuring in Video 2
+    </p>
+
+
+    <div class="Entry">
+
+        <div name="Boxes">
+            <section class="T1_Box">
+                <div class="similarities">
+                    <textarea rows="2" cols="54" placeholder="e.g., Event 1: the guy is standing still."></textarea>
+                </div>
+
+                <div class="differences">
+                    <textarea rows="2" cols="54"
+                        placeholder="e.g., Event 1: the guy is standing still. Note: Leave the entry emptry if no similarifies."></textarea>
+                </div>
+            </section>
+
+            <section class="T1_Slider">
+                <div class="aria-widget-slider" id="two-way slider">
+                    <div class="rail-label min">
+                        0
+                    </div>
+
+                    <div class="rail" style="width: 300px;">
+                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider" tabindex="0"
+                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                            aria-label="Hotel Minimum Price">
+                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider" tabindex="0"
+                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
+                            aria-valuemax="100" aria-label="Hotel Maximum Price">
+                    </div>
+
+                    <div class="rail-label max">
+                        0
+                    </div>
+                </div>
+
+                <div class="aria-widget-slider" id="two-way slider">
+                    <div class="rail-label min">
+                        0
+                    </div>
+
+                    <div class="rail" style="width: 300px;">
+                        <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider" tabindex="0"
+                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                            aria-label="Hotel Minimum Price">
+                        <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider" tabindex="0"
+                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
+                            aria-valuemax="100" aria-label="Hotel Maximum Price">
+                    </div>
+
+                    <div class="rail-label max">
+                        0
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+    <div class="mybutton">
+        <button onclick="addElements()">Add the more events here</button>
+    </div>
+    <!-- This is task 2 -->
+    <p class="tasks"><b>Task 2: Play Video 2 FIRST and find similar events in Video 1. Segement both events out.</b></p>
+    <p>
+        Step 1:Identify an event occuring in Video 2
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp &nbsp &nbsp &nbsp
+        &nbsp
+        Step 2:Identify a SIMILAR event occuring in Video 1
+    </p>
+
+
+    <div class="Entry">
+
+        <div name="Boxes2" class="Task2">
+            <section class="T2_Box">
+                <div class="similarities">
+                    <textarea rows="2" cols="54"
+                        placeholder="e.g., Event 1: Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
+                </div>
+
+                <div class="differences">
+                    <textarea rows="2" cols="54"
+                        placeholder="e.g., Event 1: The guy appears to be getting some water"></textarea>
+                </div>
+            </section>
+
+            <section class="T2_Slider">
+                <div class="aria-widget-slider" id="two-way slider">
+                    <div class="rail-label min">
+                        0
+                    </div>
+
+                    <div class="rail" style="width: 300px;">
+                        <img id="minPriceHotel" src="images/r-arrow2.png" height="25px" role="slider2" tabindex="0"
+                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                            aria-label="Hotel Minimum Price">
+                        <img id="maxPriceHotel" src="images/l-arrow2.png" height="25px" role="slider2" tabindex="0"
+                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
+                            aria-valuemax="100" aria-label="Hotel Maximum Price">
+                    </div>
+
+                    <div class="rail-label max">
+                        0
+                    </div>
+                </div>
+
+                <div class="aria-widget-slider" id="two-way slider">
+                    <div class="rail-label min">
+                        0
+                    </div>
+
+                    <div class="rail" style="width: 300px;">
+                        <img id="minPriceHotel" src="images/r-g-arrow.png" height="25px" role="slider2" tabindex="0"
+                            class="min thumb" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0" aria-valuemax="100"
+                            aria-label="Hotel Minimum Price">
+                        <img id="maxPriceHotel" src="images/l-g-arrow.png" height="25px" role="slider2" tabindex="0"
+                            class="max thumb" aria-valuemin="0" aria-valuenow="100" aria-valuetext="100"
+                            aria-valuemax="100" aria-label="Hotel Maximum Price">
+                    </div>
+
+                    <div class="rail-label max">
+                        0
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+    <div class="mybutton">
+        <button onclick="addElements2()">Add the more events here</button>
+    </div>
+</body>
+
+<script src="bower/bower_components/jquery/dist/jquery.js"></script>
+
+<script>
+    //wait for my whole document to be ready
+    $(document).ready(function () {
+        //add your function here
+    });
+</script>
+
+
+<script src="JS Files/slider_operations.js"></script>
+<!-- <script src="JS Files/second_slider_operations.js"></script> -->
+<!-- <script src="JS Files/main.js"></script> -->
+
+<script>
+    var count = 0;
+    var count2 = 0;
+    var sliderCount = 0;
+    var sliderCount2 = 0;
+    function removeElement(elementName) {
+        // Removes an element from the document
+        var element = document.getElementsByName(elementName)
+        element[0].parentNode.removeChild(element[0]);
+    }
+
+    function addElements() {
+        //add some guard in here - alert user
+
+        // if (isValid() == true) //make sure the entry is valid before adding more entries
+        // {
+        //copy everything from the last column
+        var text_elmnt = document.getElementsByClassName("T1_Box")[count]
+        var slider_elmnt = document.getElementsByClassName("T1_Slider")[count]
+
+        var boxes = document.getElementsByName("Boxes")[0];
+
+        var txt_cln = text_elmnt.cloneNode(true);
+        var slider_cln = slider_elmnt.cloneNode(true);
+
+        // clear the text area
+        var similarBox = txt_cln.getElementsByTagName("TEXTAREA")[0];
+        similarBox.setAttribute('placeholder', 'Add your own observations of events');
+        similarBox.value = '';
+
+        var diffBox = txt_cln.getElementsByTagName("TEXTAREA")[1];
+        diffBox.setAttribute('placeholder', 'Add your own observations of events');
+        diffBox.value = '';
+
+
+        boxes.appendChild(txt_cln);
+        boxes.appendChild(slider_cln);
+
+        count++;
+
+        sliderCount++;
+        connectSliders(sliderCount); //assoicate sliders with videos
+        // }
+        //pass id from original to copy
+
+    }
+
+    function addElements2() {
+        var text_elmnt = document.getElementsByClassName("T2_Box")[count2];
+        var slider_elmnt = document.getElementsByClassName("T2_Slider")[count2];
+
+        var boxes = document.getElementsByName("Boxes2")[0];
+
+        var txt_cln = text_elmnt.cloneNode(true);
+        var slider_cln = slider_elmnt.cloneNode(true);
+
+        // clear the text area
+        var similarBox = txt_cln.getElementsByTagName("TEXTAREA")[0];
+        similarBox.setAttribute('placeholder', 'Add your own observations of events');
+        similarBox.value = '';
+
+        var diffBox = txt_cln.getElementsByTagName("TEXTAREA")[1];
+        diffBox.setAttribute('placeholder', 'Add your own observations of events');
+        diffBox.value = '';
+
+
+        boxes.appendChild(txt_cln);
+        boxes.appendChild(slider_cln);
+
+        count2 = count2 + 1;
+
+        sliderCount2++;
+        connectSliders2(sliderCount2); //assoicate sliders with videos
+        // }
+        //pass id from original to copy
+    }
+</script>
+
+</html>
