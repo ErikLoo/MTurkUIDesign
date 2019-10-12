@@ -287,8 +287,12 @@
 
 
 <script src="bower/bower_components/jquery/dist/jquery.js"></script>
+<script src = "JS Files/checkbox.js"></script>
 <script>
     $(function () {
+
+        //set up the checkbox listener once the web page starts loading
+        setupCheckbox($(".Entry")[0]);
 
         $('.tab-panels .tabs li').on('click', function () {
 
@@ -315,7 +319,6 @@
     });
 </script>
 
-<script src = "JS Files/checkbox.js"></script>
 <script src="JS Files/slider_operations.js"></script>
 <!-- <script src="JS Files/second_slider_operations.js"></script> -->
 <!-- <script src="JS Files/main.js"></script> -->
@@ -337,8 +340,10 @@
         // if (isValid() == true) //make sure the entry is valid before adding more entries
         // {
         //copy everything from the last column
-        var text_elmnt = document.getElementsByClassName("T1_Box")[count]
-        var slider_elmnt = document.getElementsByClassName("T1_Slider")[count]
+        // var text_elmnt = document.getElementsByClassName("T1_Box")[count]
+        var text_elmnt = $(".T1_Box")[count]; 
+        // var slider_elmnt = document.getElementsByClassName("T1_Slider")[count]
+        var slider_elmnt = $(".T1_Slider")[count];     
 
         var boxes = document.getElementsByName("Boxes")[0];
 
@@ -357,6 +362,7 @@
 
         sliderCount++;
         connectSliders(sliderCount); //assoicate sliders with videos
+        setupCheckbox($(".T1_Box")[count]);//set up checkbox again after creating new elements
         // }
         //pass id from original to copy
 

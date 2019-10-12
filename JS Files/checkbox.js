@@ -1,6 +1,7 @@
-function setupCheckbox(){
+function setupCheckbox(ElenName){
        //click event for checkboxes
-        $(".Yes").on("click",function(){
-            alert("Yes")
+        var count = 0; 
+        ElenName.find(".Yes").on("click",function(){
+            alert("Yes" +count)
         });
 }
