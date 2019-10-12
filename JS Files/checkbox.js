@@ -1,7 +1,8 @@
 function setupCheckbox(ElenName){
        //click event for checkboxes
-        var count = 0; 
         ElenName.find(".Yes").on("click",function(){
             alert("Yes" +count)
+            //uncheck No box
+            ElenName.find(".No").attr("checked",false)
         });
 }

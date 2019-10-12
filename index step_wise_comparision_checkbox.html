@@ -292,7 +292,7 @@
     $(function () {
 
         //set up the checkbox listener once the web page starts loading
-        setupCheckbox($(".Entry")[0]);
+        setupCheckbox($(".Entry"));
 
         $('.tab-panels .tabs li').on('click', function () {
 
@@ -362,7 +362,7 @@
 
         sliderCount++;
         connectSliders(sliderCount); //assoicate sliders with videos
-        setupCheckbox($(".T1_Box")[count]);//set up checkbox again after creating new elements
+        setupCheckbox($(".T1_Box").eq(count));//set up checkbox again after creating new elements
         // }
         //pass id from original to copy
 
