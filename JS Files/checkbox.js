@@ -12,7 +12,7 @@ function setupCheckbox(ElenName){
             //uncheck No box
             ElenName.find(".No").eq(0).prop("checked",false);
             //show the slider
-            ElenName.find(".aria-widget-slider").eq(1).show()
+            ElenName.find(".aria-widget-slider").eq(1).slideDown(300)
         });
 
         ElenName.find(".No").on("click",function(){
@@ -20,6 +20,6 @@ function setupCheckbox(ElenName){
             //uncheck No box
             ElenName.find(".Yes").eq(0).prop("checked",false);
             //hide the slider
-            ElenName.find(".aria-widget-slider").eq(1).hide()
+            ElenName.find(".aria-widget-slider").eq(1).slideUp(300)
         });
 }
