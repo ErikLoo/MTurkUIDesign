@@ -115,8 +115,8 @@
 
     <div class="tab-panels">
         <ul class="tabs">
-            <li rel="panel1" class="active">Task 1</li>
-            <li rel="panel2">Task2</li>
+            <li rel="panel1" class="active1" Name="gtab">Task 1</li>
+            <li rel="panel2"  Name="btab">Task 2</li>
         </ul>
 
         <div id="panel1" class="panel active">
@@ -132,7 +132,7 @@
                 &nbsp &nbsp &nbsp
                 &nbsp &nbsp &nbsp
                 &nbsp &nbsp
-                Step 2:Does this event occur in Video 2?
+                Step 2:Does a SIMILAR event occur in Video 2?
             </p>
 
             <div class="Entry">
@@ -213,11 +213,10 @@
             <p>
                 Step 1:Identify an event occuring in Video 2
                 &nbsp &nbsp &nbsp &nbsp
-                &nbsp &nbsp &nbsp &nbsp
-                &nbsp &nbsp &nbsp &nbsp
-                &nbsp &nbsp &nbsp &nbsp
-                &nbsp
-                Step 2:Identify a SIMILAR event occuring in Video 1
+                &nbsp &nbsp &nbsp
+                &nbsp &nbsp &nbsp
+                &nbsp &nbsp
+                Step 2:Does a SIMILAR event occur in Video ?
             </p>
 
 
@@ -227,13 +226,20 @@
                     <section class="T2_Box">
                         <div class="similarities">
                             <textarea rows="2" cols="54"
-                                placeholder="e.g., Event 1: Similarly, the guy is getting some water. Note: Leave the entry empty if no similarities."></textarea>
+                                placeholder="e.g., Event 1: the guy is standing still."></textarea>
                         </div>
 
+                        <!-- add checkboxes in there -->
+
                         <div class="differences">
-                            <textarea rows="2" cols="54"
-                                placeholder="e.g., Event 1: The guy appears to be getting some water"></textarea>
+                            <form action="/action_page.php" method="get">
+                                <input type="checkbox" class="No" name="choice"> No.<br>
+                                <input type="checkbox" class="Yes" name="choice"> Yes. Video segment indicated on the
+                                slider
+                                below<br>
+                            </form>
                         </div>
+
                     </section>
 
                     <section class="T2_Slider">
@@ -287,19 +293,27 @@
 
 
 <script src="bower/bower_components/jquery/dist/jquery.js"></script>
-<script src = "JS Files/checkbox.js"></script>
+<script src="JS Files/checkbox.js"></script>
 <script>
     $(function () {
 
         //set up the checkbox listener once the web page starts loading
-        setupCheckbox($(".Entry").eq(0));
+        setupCheckbox($(".Entry").eq(0), $(".Entry").eq(0));
+        setupCheckbox($(".Entry").eq(1), $(".Entry").eq(1));
 
         $('.tab-panels .tabs li').on('click', function () {
 
             var $panel = $(this).closest('.tab-panels');
+            $panel.find('.tabs li.active2').removeClass('active2');
+            $panel.find('.tabs li.active1').removeClass('active1');
 
-            $panel.find('.tabs li.active').removeClass('active');
-            $(this).addClass('active');
+            if ($(this).attr("rel") == "panel1") {
+              
+                $(this).addClass('active1');
+            }
+            else{
+                $(this).addClass('active2');
+            }
 
             //figure out which panel to show
             var panelToShow = $(this).attr('rel');
@@ -337,13 +351,9 @@
     function addElements() {
         //add some guard in here - alert user
 
-        // if (isValid() == true) //make sure the entry is valid before adding more entries
-        // {
-        //copy everything from the last column
-        // var text_elmnt = document.getElementsByClassName("T1_Box")[count]
-        var text_elmnt = $(".T1_Box")[count]; 
+        var text_elmnt = $(".T1_Box")[count];
         // var slider_elmnt = document.getElementsByClassName("T1_Slider")[count]
-        var slider_elmnt = $(".T1_Slider")[count];     
+        var slider_elmnt = $(".T1_Slider")[count];
 
         var boxes = document.getElementsByName("Boxes")[0];
 
@@ -362,7 +372,7 @@
 
         sliderCount++;
         connectSliders(sliderCount); //assoicate sliders with videos
-        setupCheckbox($(".T1_Box").eq(count));//set up checkbox again after creating new elements
+        setupCheckbox($(".T1_Box").eq(count), $(".T1_Slider").eq(count));//set up checkbox again after creating new elements
         // }
         //pass id from original to copy
 
@@ -382,18 +392,17 @@
         similarBox.setAttribute('placeholder', 'Add your own observations of events');
         similarBox.value = '';
 
-        var diffBox = txt_cln.getElementsByTagName("TEXTAREA")[1];
-        diffBox.setAttribute('placeholder', 'Add your own observations of events');
-        diffBox.value = '';
 
 
         boxes.appendChild(txt_cln);
         boxes.appendChild(slider_cln);
 
-        count2 = count2 + 1;
+        count2++;
 
         sliderCount2++;
         connectSliders2(sliderCount2); //assoicate sliders with videos
+        setupCheckbox($(".T2_Box").eq(count2), $(".T2_Slider").eq(count2));//set up checkbox again after creating new elements
+
         // }
         //pass id from original to copy
     }

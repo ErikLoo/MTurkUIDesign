@@ -33,8 +33,19 @@ body {
 
 .tab-panels ul li.active {
     color: #fff;
-    background: #666;
+    background: green;
 }
+
+.tab-panels ul li.active1 {
+    color: #fff;
+    background:green;
+}
+
+.tab-panels ul li.active2 {
+    color: #fff;
+    background:rgb(21, 181, 235);
+}
+
 
 .tab-panels .panel {
     display: none;
