@@ -216,7 +216,7 @@
                 &nbsp &nbsp &nbsp
                 &nbsp &nbsp &nbsp
                 &nbsp &nbsp
-                Step 2:Does a SIMILAR event occur in Video ?
+                Step 2:Does a SIMILAR event occur in Video 1 ?
             </p>
 
 
@@ -298,8 +298,8 @@
     $(function () {
 
         //set up the checkbox listener once the web page starts loading
-        setupCheckbox($(".Entry").eq(0), $(".Entry").eq(0));
-        setupCheckbox($(".Entry").eq(1), $(".Entry").eq(1));
+        setupCheckbox($(".T1_Box").eq(0), $(".T1_Slider").eq(0));//set up checkbox again after creating new elements
+        setupCheckbox($(".T2_Box").eq(0), $(".T2_Slider").eq(0));//set up checkbox again after creating new elements
 
         $('.tab-panels .tabs li').on('click', function () {
 
@@ -365,12 +365,17 @@
         similarBox.setAttribute('placeholder', 'Add your own observations of events');
         similarBox.value = '';
 
-        boxes.appendChild(txt_cln);
-        boxes.appendChild(slider_cln);
+        //append new node after
+        // boxes.appendChild(txt_cln);
+        // boxes.appendChild(slider_cln);
 
-        count++;
+        //insert a new node before the previous node
+        boxes.insertBefore(slider_cln,boxes.childNodes[0]);
+        boxes.insertBefore(txt_cln,boxes.childNodes[0]);
 
-        sliderCount++;
+        // count++;
+
+        // sliderCount++;
         connectSliders(sliderCount); //assoicate sliders with videos
         setupCheckbox($(".T1_Box").eq(count), $(".T1_Slider").eq(count));//set up checkbox again after creating new elements
         // }
@@ -393,13 +398,17 @@
         similarBox.value = '';
 
 
+        //append a new node after the previous node
+        // boxes.appendChild(txt_cln);
+        // boxes.appendChild(slider_cln);
 
-        boxes.appendChild(txt_cln);
-        boxes.appendChild(slider_cln);
+        //insert a new node before the previous node
+        boxes.insertBefore(slider_cln,boxes.childNodes[0]);
+        boxes.insertBefore(txt_cln,boxes.childNodes[0]);
 
-        count2++;
+        // count2++;
 
-        sliderCount2++;
+        // sliderCount2++;
         connectSliders2(sliderCount2); //assoicate sliders with videos
         setupCheckbox($(".T2_Box").eq(count2), $(".T2_Slider").eq(count2));//set up checkbox again after creating new elements
 
