@@ -322,7 +322,7 @@ function connectSliders2(count){
 // Initialise Sliders on the page
 window.addEventListener('load', function () {
 
-  connectSliders(0); 
-  connectSliders2(0);
+  // connectSliders(0); 
+  // connectSliders2(0);
 
 });

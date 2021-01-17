@@ -2,12 +2,12 @@ body {
     background: #fafafa;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
-    width: 920px;
+    width: auto;
 }
 
 
 .tab-panels ul {
-    margin-left: 40px;
+    margin-left: 30px;
     padding: 0;
 }
 
@@ -46,6 +46,10 @@ body {
     background:rgb(21, 181, 235);
 }
 
+.tab-panels ul li.active3 {
+    color: #fff;
+    background:#f08409;
+}
 
 .tab-panels .panel {
     display: none;

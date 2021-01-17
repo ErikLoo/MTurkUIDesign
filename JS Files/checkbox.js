@@ -1,30 +1,41 @@
+function setupCheckbox(){
+        
+    // get the current vid
+    video = document.getElementById('vid1');
 
-function setupCheckbox(ElenName,SliderName,countID){
-       //click event for checkboxes
-        //initialize the value
+    $(".v_100").prop("checked",false);
+    $(".v_75").prop("checked",false);
+    $(".v_50").prop("checked",false);
 
-        ElenName.find(".No").eq(0).prop("checked",false);
-        ElenName.find(".Yes").eq(0).prop("checked",false);
 
-        ElenName.find(".No").eq(0).prop("name","choice-no-"+countID);
-        ElenName.find(".Yes").eq(0).prop("name","choice-yes-"+countID);
+     $(".v_100").on("click",function(){
+        // alert("Yes" +count)
+        //uncheck No box
+        $(".v_75").prop("checked",false);
+        $(".v_50").prop("checked",false);
+        video.playbackRate = 1.0;
+        //show the slider
+    });
 
-        SliderName.find(".aria-widget-slider").eq(1).hide(); 
-        //the slider is by default hidden
 
-        ElenName.find(".Yes").on("click",function(){
-            // alert("Yes" +count)
-            //uncheck No box
-            ElenName.find(".No").eq(0).prop("checked",false);
-            //show the slider
-            SliderName.find(".aria-widget-slider").eq(1).slideDown(300)
-        });
+    $(".v_75").on("click",function(){
+        // alert("Yes" +count)
+        //uncheck No box
+        $(".v_100").prop("checked",false);
+        $(".v_50").prop("checked",false);
+        video.playbackRate = 0.75;
 
-        ElenName.find(".No").on("click",function(){
-            // alert("No" +count)
-            //uncheck No box
-            ElenName.find(".Yes").eq(0).prop("checked",false);
-            //hide the slider
-            SliderName.find(".aria-widget-slider").eq(1).slideUp(300)
-        });
+        //show the slider
+    });
+
+    $(".v_50").on("click",function(){
+        // alert("Yes" +count)
+        //uncheck No box
+        $(".v_75").prop("checked",false);
+        $(".v_100").prop("checked",false);
+        video.playbackRate = 0.5;
+
+        //show the slider
+    });
+
 }
