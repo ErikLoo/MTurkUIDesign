@@ -2,23 +2,123 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b02ffb25-1e18-4bf6-9f94-c0e16759f600" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../CSS Files/panel_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CSS Files/panel_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CSS Files/slider_styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CSS Files/slider_styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../CSS Files/triangle.css" beforeDir="false" afterPath="$PROJECT_DIR$/../CSS Files/triangle.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JS Files/checkbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JS Files/checkbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JS Files/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JS Files/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JS Files/second_slider_operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JS Files/second_slider_operations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../JS Files/slider_operations.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JS Files/slider_operations.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index step_wise_comparision.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index step_wise_comparision_checkbox.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index step_wise_comparision_jq.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jQueryPractice.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../videos/Looking for a  lost object.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../videos/Tea making soundless.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../videos/coffee making soundless.mp4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../videos/coffee_making_shortened.mp4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JS Files/vid_pause.js" beforeDir="false" afterPath="$PROJECT_DIR$/../JS Files/vid_pause.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../online_vid_player.html" beforeDir="false" afterPath="$PROJECT_DIR$/../online_vid_player.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Label Track.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Label Track.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Silence Labels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Silence Labels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sound duration.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Sound duration.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/1.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/1.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/10.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/10.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/10.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/11.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/11.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/11.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/11.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/12.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/12.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/12.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/12.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/13.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/13.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/13.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/14.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/14.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/14.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/15.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/15.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/15.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/16.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/16.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/16.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/16.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/17.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/17.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/17.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/17.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/18.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/18.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/18.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/18.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/19.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/19.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/19.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/19.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/2.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/2.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/20.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/20.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/20.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/20.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/21.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/21.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/21.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/21.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/22.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/22.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/22.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/22.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/23.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/23.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/23.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/23.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/24.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/24.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/25.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/26.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/26.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/27.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/27.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/28.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/28.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/29.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/29.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/3.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/3.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/30.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/30.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/31.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/31.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/32.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/32.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/33.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/33.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/34.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/35.TextGrid" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/35.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/4.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/4.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/5.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/5.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/6.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/6.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/7.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/7.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/7.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/7.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/8.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/8.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/8.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/8.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/9.TextGrid" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/9.TextGrid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs extended/9.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs extended/9.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/1.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/1.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/10.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/10.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/11.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/11.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/12.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/12.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/13.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/13.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/14.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/14.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/15.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/15.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/16.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/16.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/17.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/17.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/18.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/18.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/19.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/19.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/2.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/2.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/20.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/20.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/21.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/21.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/22.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/22.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/23.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/23.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/24.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/25.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/26.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/27.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/28.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/29.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/30.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/31.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/32.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/33.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/34.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/35.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/4.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/4.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/5.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/7.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/7.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/8.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/8.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio segs/9.wav" beforeDir="false" afterPath="$PROJECT_DIR$/audio segs/9.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/audio_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/audio_processing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/introduction.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/syllable rate.svg" beforeDir="false" afterPath="$PROJECT_DIR$/syllable rate.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../videos/create youtube playlist_Trim.mp4" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,9 +131,9 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="7" />
-          <entry key="project.open.time.0" value="3" />
+          <entry key="project.open.time.0" value="4" />
           <entry key="project.open.time.4" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,13 +154,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="28" />
-          <entry key="py" value="2963" />
+          <entry key="py" value="3100" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="28" />
-          <entry key="Python" value="2963" />
+          <entry key="Python" value="3100" />
         </counts>
       </usages-collector>
     </session>
@@ -70,29 +170,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/audio_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
+            <state relative-caret-position="115">
+              <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Silence Labels.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="116" lean-forward="true" selection-end-column="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sound duration.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="56" selection-start-column="56" selection-end-column="56" />
             </state>
           </provider>
         </entry>
@@ -122,10 +204,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1212" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -301,14 +383,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12328767" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4121475" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.38069415" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -343,10 +426,20 @@
     <entry file="file://$PROJECT_DIR$/syllable rate.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/audio_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="100" lean-forward="true" selection-start-line="100" selection-end-line="100" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Silence Labels.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="116" lean-forward="true" selection-end-column="122" />
+          <caret column="116" selection-end-column="211" />
         </state>
       </provider>
     </entry>
@@ -354,16 +447,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="56" selection-start-column="56" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/audio_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="105" column="21" selection-start-line="105" selection-start-column="21" selection-end-line="105" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

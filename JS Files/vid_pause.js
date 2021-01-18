@@ -10,6 +10,7 @@ var time_start_play = 0;
 var myTimer; 
 var myCountUpTimer; 
 var time_passed = 0;
+var listenerAttached = true; 
 
 var vid_1_pause_array = [6.07, 27.24, 32.01, 38.18, 44.4, 52.76, 67.73, 71.56, 75.93, 78.91, 84.55, 89.21, 107.85];
 // var vid_1_duration_array = [4.1, 2.01, 3.51, 4.01, 4.8, 6.0, 5.95, 1.85, 3.7, 1.41, 4.95, 2.15, 5.44];
@@ -17,7 +18,10 @@ var vid_1_duration_array = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 30
 
 // properties of vid 2
 var vid_2_pause_array = [14.61, 17.37, 28.87, 35.9, 44.47, 48.76, 52.09, 60.77, 63.29, 69.15, 82.04, 85.22, 104.4, 119.69, 125.55, 131.26, 147.12];
-var vid_2_duration_array = [3.86, 1.42, 4.66, 3.23, 6.29, 3.65, 2.56, 1.38, 1.43, 5.16, 2.24, 1.66, 8.8, 4.34, 4.38, 2.83, 6.26];
+var vid_2_duration_array = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300];
+
+var vid_3_pause_array = [13.71, 17.59, 32.98, 36.58, 43.72, 55.1, 64.83, 74.35, 81.16, 89.67, 109.08, 114.85, 133.19, 142.18, 150.94];
+var vid_3_duration_array = [300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300, 300];
 
 var pause_array = vid_1_pause_array;
 var duration_array = vid_1_duration_array;
@@ -49,7 +53,7 @@ var during_puase = false;
 var pausing_function = function(){
     v_current_t = video.currentTime;
     // console.log(pause_on);
-    if(Math.abs(v_current_t-old_f_num)>0.3 && isIn(v_current_t, pause_array) == true)
+    if(Math.abs(v_current_t-old_f_num)>0.3 && isIn(v_current_t, pause_array) == true && duration_array[count]>=1)
     {
         if (video.paused!=true && pause_on==true){
             video.pause();
@@ -100,8 +104,25 @@ var pausing_function = function(){
 };
 // call pausing fucntion when the timeupdate event has taken place
 video.addEventListener("timeupdate", pausing_function);
-// var text1 = video.addTextTrack("captions");
-// text1.addCue(new TextTrackCue("Test text", 1.000, 4.000, "", "", "", true));
+listenerAttached = true;
+
+function pause_control(enable_pause){
+    if (enable_pause==false){
+        if (listenerAttached==true){
+            video.removeEventListener('timeupdate', pausing_function);
+            listenerAttached = false; 
+            console.log("remove pause listener")
+        }
+    }else{
+        if(listenerAttached==false){
+            video.addEventListener("timeupdate", pausing_function);
+            listenerAttached = true; 
+            console.log("enable pause listener")
+
+        }
+    }
+}
+
 function  start_the_timer(){
     time_passed=0;
     var total_time = duration_array[count]; 

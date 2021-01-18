@@ -7,8 +7,9 @@ body {
 
 
 .tab-panels ul {
-    margin-left: 30px;
+    margin-left: 10px;
     padding: 0;
+    margin-bottom: 0px;
 }
 
 .tab-panels ul li {

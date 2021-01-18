@@ -12,6 +12,9 @@ label_list = []
 silence_duration_list = []
 sound_duration_list = []
 
+tlt_syllables =0
+tlt_duration = 0
+
 s_t_list = []
 e_t_list = []
 
@@ -23,9 +26,11 @@ with open('Label Track.txt','r') as f:
         s_t_list.append(start_t)
         e_t_list.append(end_t)
         sound_duration_list.append([start_t,end_t])
+        tlt_duration+=(end_t-start_t)
         # print(num)
         # silence_label_list.append(num)
 
+print(tlt_duration)
 silence_duration_list = np.array(s_t_list[1:len(s_t_list)])-np.array(e_t_list[0:-1])
 silence_label_list = s_t_list[1:len(s_t_list)]
 silence_label_list.append(e_t_list[-1])
@@ -53,6 +58,7 @@ for fname in glob.glob("audio segs" + '/*.wav'):
 sylb_rate_list = []
 last_sylb_rate = 0
 sylb_rate = 0
+print(file_count)
 for i in range(file_count):
     p = str(i+1)  # Audio File title
     c = r"C:\Users\Owner\Desktop\Online video player\video player design\pause_insertion\audio segs extended"  # Path to the Audio_File directory (Python 3.7)
@@ -63,17 +69,20 @@ for i in range(file_count):
         sylb_rate_list.append(sylb_rate)
         print(str(i + 1) + ".wav : " + str(sylb_rate) + " sylbs/sec")
     else:
-        sylb_rate_list.append(last_sylb_rate)
-        print(str(i+1)+".wav" + "file not clear. Use the last syllable rate")
+        # sylb_rate_list.append(last_sylb_rate)
+        num_sylb=0
+        sylb_rate_list.append(0)
+        print(str(i+1)+".wav" + "file not clear. Set syllable rate to 0")
 
     last_sylb_rate = sylb_rate
+    tlt_syllables += num_sylb
 
 print(sylb_rate_list)
 print("avg sylb rate: " + str(np.average(np.array(sylb_rate_list))))
 
 ##### Visualize the sylb rate
-avg_sylb_rate = np.average(np.array(sylb_rate_list))
-vid_length = 120
+avg_sylb_rate = np.average(sylb_rate_list)
+vid_length = 120+30
 plt.xlim(0, vid_length)
 plt.ylim(0, 8)
 
